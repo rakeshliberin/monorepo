@@ -1,0 +1,8 @@
+{
+  "name": "plivodispatchrule",
+  "rule": {
+    "dispatchRuleIndividual": {
+      "roomPrefix": "call-"
+    }
+  }
+}

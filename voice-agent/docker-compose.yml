@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  voice-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    network_mode: "host"
+    # Uncomment if you want to mount code for live development
+    # volumes:
+    #  - ~/recordings:/home/appuser/recordings
+    # user: "10001:10001"
+    # Add any additional configuration here

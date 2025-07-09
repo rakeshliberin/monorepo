@@ -1,0 +1,70 @@
+---
+apiVersion: "v1"
+kind: "Namespace"
+metadata:
+  name: "septa"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voice-agent
+  namespace: septa
+  labels:
+    app: voice-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voice-agent
+  template:
+    metadata:
+      labels:
+        app: voice-agent
+    spec:
+      terminationGracePeriodSeconds: 600
+
+      containers:
+        - name: "voice-agent-sha256-1"
+          image: "us-central1-docker.pkg.dev/ultra-strength-458503-m2/voice-agent/voice-agent@sha256:6f432b20f58ed1a7c48b9398f4abc244922ac709ed6e6fda95c9b51dce88172e"
+
+          resources:
+            requests:
+              cpu: "4"
+              memory: "8Gi"
+            limits:
+              cpu: "4"
+              memory: "8Gi"
+
+          env:
+            - name: LIVEKIT_URL
+              value: "wss://septa-voice-o971i6su.livekit.cloud"
+            - name: LIVEKIT_API_KEY
+              value: "APIrA5DkmFehYkm"
+            - name: LIVEKIT_API_SECRET
+              value: "vFMyCsXAFkCjIu7w7cwiz0k4evSiyfo5UFYTP2vOF9w"
+            - name: GOOGLE_API_KEY
+              value: "AIzaSyA1LoiqqFTfZBTOTRujKcaWdUeOKZQ-lX4"
+            - name: GEMINI_API_KEY
+              value: "AIzaSyA1LoiqqFTfZBTOTRujKcaWdUeOKZQ-lX4"
+            - name: QDRANT_URL
+              value: "https://eb6e77cf-fcc2-49ce-9f42-b2e4542640e7.europe-west3-0.gcp.cloud.qdrant.io:6333"
+            - name: QDRANT_API_KEY
+              value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.vJiGfWU6GfAOnDHjUIulkfyATQfuYWSYmhYCuC1xoVk"
+            - name: SARVAM_API_KEY
+              value: "e84e9e41-1aba-4038-94d9-6256bb1c68d3"
+            - name: LITELLM_MODEL
+              value: "gemini/gemini-2.5-flash"
+            - name: LANGFUSE_PUBLIC_KEY
+              value: "pk-lf-10295d67-f74d-4ced-a6e2-22540b8434da"
+            - name: LANGFUSE_SECRET_KEY
+              value: "sk-lf-6bb3ff23-4ed5-4cc6-a2dd-1cae15adbe68"
+            - name: LANGFUSE_HOST
+              value: "https://cloud.langfuse.com"
+            - name: DEEPGRAM_API_KEY
+              value: "ebf912b7a3e3b2402e5fcc1ff560acad53b5c2aa"
+            - name: ELEVEN_API_KEY
+              value: "sk_07c41c0af28c4bb744da7b3b9754d6781140b0ac32902431"
+            - name: SENIOR_EXEC_NUMBER
+              value: "+919999851423"
+            - name: LIVEKIT_TRUNK_ID
+              value: "ST_wRKnqMf7vDs7"

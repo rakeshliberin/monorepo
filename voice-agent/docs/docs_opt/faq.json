@@ -1,0 +1,602 @@
+[
+  {
+    "id": "BILLING-001",
+    "intent": "Payment Not Reflecting",
+    "question_variants": [
+      "I have already paid my bill, but the app/website still shows an outstanding amount. What should I do?",
+      "I paid my bill but it still shows pending.",
+      "Bill paid yet outstanding amount showing.",
+      "Paid bill but balance due still visible.",
+      "App still shows due after payment.",
+      "Bill status not updated after payment.",
+      "Why is my payment not reflected as received in the app?",
+      "The app indicates I owe money, despite having paid. Please explain.",
+      "I made a payment, but the app still shows it as outstanding. What's the issue?",
+      "Payment made, but app balance hasn't updated. Can you check?",
+      "Why does the application show an amount due after I've paid?",
+      "There's a discrepancy: I paid, but the app shows outstanding amount.",
+      "Could you resolve why my completed payment isn't updated in the app?",
+      "The app balance is incorrect; it should be zero as I've paid.",
+      "Investigating why a paid amount still appears as outstanding in the application.",
+      "मैंने बिल का भुगतान कर दिया है लेकिन बकाया दिखा रहा है, क्या करूँ?",
+      "बिल भर दिया फिर भी बकाया दिख रहा है।",
+      "bill pay kar diya lekin outstanding dikh raha hai.",
+      "bill paid par due amount abhi bhi hai kya karen?"
+    ],
+    "answer_voice": {
+      "en": {
+        "condition_A_outstanding_balance_exists": "Okay, you're calling because your bill payment isn't reflecting. Let me check your account right now... Yes, I can see the outstanding balance in the system. Please don't worry, this is usually just a processing delay. If you paid through our website or app, it can take up to twenty-four hours. If you used an app like Google Pay, it can take up to three business days. I'd suggest waiting for that period to get over.",
+        "condition_B_no_outstanding_balance": "I understand you're seeing a due amount after paying. Let me check your account for you... Okay, I have good news. Our main system shows your payment was successful and your balance is zero. The I G L app or website might be taking some time to update. I'd recommend closing and reopening the app. Rest assured, your account is all clear from our end."
+      },
+      "hi": {
+        "condition_A_outstanding_balance_exists": "ठीक है, आप इसलिए कॉल कर रहे हैं क्योंकि आपका पेमेंट अभी तक शो नहीं हो रहा है। मैं अभी आपका अकाउंट चेक करता हूँ... हाँ, सिस्टम में अभी भी बैलेंस बाकी दिख रहा है। आप चिंता न करें, ऐसा पेमेंट प्रोसेस होने में देरी की वजह से होता है। अगर आपने हमारी वेबसाइट या ऐप से पेमेंट किया है, तो चौबीस घंटे लग सकते हैं। अगर Google Pay जैसे किसी दूसरे ऐप से किया है, तो तीन दिन तक लग सकते हैं। मेरा सुझाव है कि आप कृपया इतना समय इंतज़ार करें।",
+        "condition_B_no_outstanding_balance": "मैं समझ गया कि पेमेंट के बाद भी आपको बकाया दिख रहा है। मैं आपका अकाउंट चेक करता हूँ... ठीक है, अच्छी खबर है। हमारे मेन सिस्टम में आपका पेमेंट सक्सेसफुल दिख रहा है और आपका बैलेंस ज़ीरो है। आई जी एल ऐप या वेबसाइट को अपडेट होने में शायद थोड़ा टाइम लग रहा है। आप ऐप को एक बार बंद करके फिर से चालू करके देखें। आप निश्चिंत रहें, हमारी तरफ से आपका अकाउंट बिलकुल क्लियर है।"
+      }
+    }
+  },
+  {
+    "id": "BILLING-002",
+    "intent": "Received Payment Reminder SMS",
+    "question_variants": [
+      "Why am I receiving a payment-reminder SMS?",
+      "Why did I get a payment reminder SMS?",
+      "Received payment reminder message, why?",
+      "Why am I still getting reminder SMS?",
+      "Payment reminder text message reason?",
+      "I got a payment reminder via SMS, what is this regarding?",
+      "Could you explain why I'm receiving payment reminder texts?",
+      "What triggers the payment reminder SMS messages?",
+      "Reason for receiving SMS alerts about payment reminders.",
+      "Why am I being sent text messages reminding me to pay?",
+      "Is there a reason I got an SMS payment prompt?",
+      "Please clarify the purpose of the payment reminder SMS I received.",
+      "Investigating the cause of payment reminder SMS notifications.",
+      "Why are payment reminder SMS being sent to my number?",
+      "मुझे पेमेंट रिमाइंडर एसएमएस क्यों आ रहा है?",
+      "पेमेंट रिमाइंडर मैसेज क्यों मिला?",
+      "payment reminder sms kyon aya?",
+      "payment reminder kyun aa raha hai?"
+    ],
+    "answer_voice": {
+      "en": {
+        "condition_A_no_outstanding_balance": "I see you're calling about a payment reminder S M S. Let me pull up your account details... Okay, I can confirm your account has a zero balance. You can ignore that S M S. It was likely sent automatically just before your latest payment was registered in our system. Your account is fully paid.",
+        "condition_B_outstanding_balance_exists": "I understand you received a reminder S M S. Let me check your account... Yes, I see that the reminder is for a valid outstanding amount of, [Amount] rupees, which is due by the end of this month, June thirtieth. I can inform you about the different ways you can pay the bill, if you'd like."
+      },
+      "hi": {
+        "condition_A_no_outstanding_balance": "मैं देख सकता हूँ कि आप पेमेंट रिमाइंडर एस एम एस के बारे में पूछ रहे हैं। मैं आपकी अकाउंट डिटेल्स चेक करता हूँ... ठीक है, मैं कन्फर्म कर सकता हूँ कि आपके अकाउंट का बैलेंस ज़ीरो है। आप उस एस एम एस को इग्नोर कर सकते हैं। वो शायद आपका पेमेंट हमारे सिस्टम में अपडेट होने से ठीक पहले ऑटोमैटिकली चला गया होगा। आपका अकाउंट पूरी तरह से पेड है।",
+        "condition_B_outstanding_balance_exists": "मैं समझ गया कि आपको एक रिमाइंडर एस एम एस मिला है। मैं आपका अकाउंट चेक करता हूँ... जी, यह रिमाइंडर आपके, [Amount] रुपये के सही बैलेंस के लिए है, जिसकी ड्यू डेट इस महीने की तीस तारीख, यानी तीस जून है। अगर आप चाहें, तो मैं आपको बिल भरने के अलग-अलग तरीकों के बारे में जानकारी दे सकता हूँ।"
+      }
+    }
+  },
+  {
+    "id": "BILLING-101",
+    "intent": "Self-Billing Process",
+    "question_variants": [
+      "How to self-bill?",
+      "What are the steps for self-billing?",
+      "Can I generate my own bill?",
+      "How do I submit my meter reading myself?",
+      "Tell me the process for self-meter reading.",
+      "सेल्फ-बिलिंग कैसे करते हैं?",
+      "खुद से बिल बनाने का क्या प्रोसेस है?",
+      "अपना मीटर रीडिंग खुद कैसे जमा करूँ?",
+      "सेल्फ बिलिंग के स्टेप्स बताइए।"
+    ],
+    "answer_voice": {
+      "en": "I can certainly explain the self-billing process. It’s a feature available in our I G L Connect mobile app. It allows you to generate your own bill by submitting your meter reading and a photo of the meter directly through the app. Please be aware that you must be subscribed to E-bill to use this feature, and there should be a gap of at least twenty-one days from your last bill.",
+      "hi": "जी बिलकुल, मैं आपको सेल्फ-बिलिंग का प्रोसेस समझा देता हूँ। यह एक सुविधा है जो हमारी आई जी एल कनेक्ट मोबाइल ऐप में उपलब्ध है। यह आपको ऐप के माध्यम से सीधे अपनी मीटर रीडिंग और मीटर का एक फोटो जमा करके अपना बिल खुद बनाने की अनुमति देता है। कृपया ध्यान दें कि इस सुविधा का उपयोग करने के लिए आपका ई-बिल सब्सक्राइबर होना ज़रूरी है, और आपके पिछले बिल से कम से कम इक्कीस दिन का गैप होना चाहिए।"
+    }
+  },
+  {
+    "id": "BILLING-102",
+    "intent": "Self-Billing Benefits",
+    "question_variants": [
+      "How does self-billing benefit me?",
+      "Why should I use self-billing?",
+      "What are the advantages of self-billing?",
+      "सेल्फ-बिलिंग के क्या फायदे हैं?",
+      "मैं सेल्फ-बिलिंग क्यों इस्तेमाल करूँ?",
+      "खुद से बिल बनाने के क्या लाभ हैं?"
+    ],
+    "answer_voice": {
+      "en": "You're asking about the benefits of self-billing? The main advantage is convenience. It gives you the control to generate your own bill based on your actual reading at a time that suits you, which helps in avoiding estimated bills. You also don't need to depend on a meter reader's visit.",
+      "hi": "आप सेल्फ-बिलिंग के फायदों के बारे में पूछ रहे हैं? इसका सबसे बड़ा फायदा है सुविधा। यह आपको अपनी सुविधानुसार अपनी असली रीडिंग के आधार पर अपना बिल खुद बनाने का कंट्रोल देता है, जिससे अंदाज़े वाले बिलों से बचने में मदद मिलती है। आपको मीटर रीडर के आने पर भी निर्भर रहने की ज़रूरत नहीं है।"
+    }
+  },
+  {
+    "id": "BILLING-103",
+    "intent": "Estimated vs Retail Bill",
+    "question_variants": [
+      "What is an 'Estimated' bill?",
+      "Why is my bill sometimes 'Retail' and sometimes 'Estimated'?",
+      "What's the difference between a retail and an estimated bill?",
+      "'एस्टीमेटेड' बिल क्या होता है?",
+      "मेरा बिल कभी 'रिटेल' और कभी 'एस्टीमेटेड' क्यों आता है?",
+      "रिटेल और एस्टीमेटेड बिल में क्या फर्क है?"
+    ],
+    "answer_voice": {
+      "en": "I can clarify that for you. A 'Retail' bill is generated based on the actual, physical reading of your meter. An 'Estimated' bill is created when we couldn't get the actual reading, for example, if the house was locked. This estimated amount is based on your past average usage. Any difference is automatically adjusted in your next actual, retail bill.",
+      "hi": "मैं आपको यह समझा देता हूँ। 'रिटेल' बिल आपकी मीटर की असली, फिजिकल रीडिंग के आधार पर बनता है। 'एस्टीमेटेड' बिल तब बनता है जब हम असली रीडिंग नहीं ले पाते, जैसे अगर घर बंद था। यह अंदाज़ा आपकी पिछली औसत खपत के आधार पर लगाया जाता है। कोई भी अंतर आपके अगले असली, यानी रिटेल बिल में अपने आप एडजस्ट हो जाता है।"
+    }
+  },
+  {
+    "id": "BILLING-104",
+    "intent": "Continuous Estimated Billing",
+    "question_variants": [
+      "What happens if I get estimated bills continuously?",
+      "My last three bills were estimated, is that a problem?",
+      "लगातार एस्टीमेटेड बिल आने पर क्या होता है?",
+      "मेरे पिछले तीन बिल एस्टीमेटेड थे, क्या यह कोई समस्या है?"
+    ],
+    "answer_voice": {
+      "en": "Yes, it is important to address that. If a connection receives three estimated bills in a row, it becomes liable for disconnection. To avoid this, please provide your current meter reading either through our app's self-billing feature or by calling us back. This will ensure we can generate an actual, retail bill for you.",
+      "hi": "जी, इस पर ध्यान देना ज़रूरी है। अगर किसी कनेक्शन पर लगातार तीन एस्टीमेटेड बिल आते हैं, तो वह कनेक्शन कटने के लिए देनदार हो जाता है। इससे बचने के लिए, कृपया हमारी ऐप के सेल्फ-बिलिंग फीचर से या हमें वापस कॉल करके अपनी वर्तमान मीटर रीडिंग ज़रूर बता दें। इससे हम यह सुनिश्चित कर पाएंगे कि आपका असली, रिटेल बिल बन सके।"
+    }
+  },
+  {
+    "id": "BILLING-105",
+    "intent": "Temporary Disconnection ('Not in Use')",
+    "question_variants": [
+      "I will be away for a few months, what should I do about my gas bill?",
+      "Can I stop my connection temporarily?",
+      "What is the 'Not in Use' facility?",
+      "मैं कुछ महीनों के लिए बाहर रहूँगा, गैस बिल का क्या करूँ?",
+      "क्या मैं अपना कनेक्शन कुछ समय के लिए बंद करवा सकता हूँ?",
+      "'नॉट इन यूज़' सुविधा क्या है?"
+    ],
+    "answer_voice": {
+      "en": "I understand you'll be away. In that case, I would strongly advise you to request a 'Temporary Disconnection'. This is important for safety. Once disconnected, we will generate your bill up to that date. After that, you will only be charged a minimal maintenance fee of twenty-five rupees per month, and no further bills will be generated until you request to restore the connection.",
+      "hi": "मैं समझ गया कि आप बाहर रहेंगे। ऐसे में, मैं आपको 'टेम्पररी डिस्कनेक्शन' यानी कुछ समय के लिए कनेक्शन कटवाने की रिक्वेस्ट डालने की सलाह दूँगा। यह सुरक्षा के लिए भी ज़रूरी है। एक बार कनेक्शन कट जाने के बाद, हम उस तारीख तक का आपका बिल बना देंगे। उसके बाद, आपसे हर महीने सिर्फ पच्चीस रुपये का न्यूनतम मेंटेनेंस चार्ज लिया जाएगा, और कनेक्शन दोबारा शुरू करवाने तक कोई और बिल नहीं आएगा।"
+    }
+  },
+  {
+    "id": "METER-201",
+    "intent": "Missed Meter Reading",
+    "question_variants": [
+      "I got a 'We Missed You' note, what do I do?",
+      "The meter reader could not take the reading.",
+      "How can I submit my reading if it was missed?",
+      "मुझे 'वी मिस्ड यू' का नोट मिला है, अब क्या करूँ?",
+      "मीटर रीडर रीडिंग नहीं ले पाया।",
+      "अगर मीटर रीडिंग छूट गयी है तो कैसे जमा करूँ?"
+    ],
+    "answer_voice": {
+      "en": "I see the meter reader missed you. No problem at all. You have a few easy options. You can take a photo of the meter and send it to the whats app number mentioned on the note they left. Or, you can simply use the 'Self-Billing' feature in our I G L Connect app to submit the reading right now.",
+      "hi": "मैं समझ गया कि मीटर रीडर आपसे मिल नहीं पाया। कोई बात नहीं। आपके पास कुछ आसान ऑप्शन हैं। आप मीटर का फोटो खींचकर उस नोट पर दिए गए व्हाट्सऐप नंबर पर भेज सकते हैं। या, आप बस हमारी आई जी एल कनेक्ट ऐप में 'सेल्फ-बिलिंग' का इस्तेमाल करके अभी रीडिंग जमा कर सकते हैं।"
+    }
+  },
+  {
+    "id": "PAYMENT-301",
+    "intent": "Payment Options",
+    "question_variants": [
+      "How can I pay my bill?",
+      "What are the different payment modes?",
+      "Where can I pay my IGL bill?",
+      "मैं अपना बिल कैसे भर सकता हूँ?",
+      "पेमेंट करने के कौन-कौन से तरीके हैं?",
+      "मैं अपना आईजीएल बिल कहाँ जमा कर सकता हूँ?"
+    ],
+    "answer_voice": {
+      "en": "You have many easy options to pay your bill. For online payments, you can use our I G L website or the I G L Connect mobile app. We accept debit cards, credit cards, net banking, and U P I. For offline payments, you can pay by cash at select I D B I Bank branches or use our cheque drop boxes.",
+      "hi": "आपके पास बिल भरने के कई आसान ऑप्शन हैं। ऑनलाइन पेमेंट के लिए, आप हमारी आई जी एल वेबसाइट या आई जी एल कनेक्ट मोबाइल ऐप का इस्तेमाल कर सकते हैं। हम डेबिट कार्ड, क्रेडिट कार्ड, नेट बैंकिंग, और यू पी आई स्वीकार करते हैं। ऑफलाइन पेमेंट के लिए, आप आई डी बी आई बैंक की कुछ शाखाओं में कैश जमा कर सकते हैं या हमारे चेक ड्रॉप बॉक्स का उपयोग कर सकते हैं।"
+    }
+  },
+  {
+    "id": "PAYMENT-401",
+    "intent": "Insta Payment (Unregistered Users)",
+    "question_variants": [
+      "How can I pay my bill without logging in?",
+      "I am not registered, how do I pay online?",
+      "What is Insta Payment?",
+      "Tell me the quickest way to pay online.",
+      "बिना लॉग-इन किए बिल कैसे भरें?",
+      "मैं रजिस्टर्ड नहीं हूँ, ऑनलाइन पेमेंट कैसे करूँ?",
+      "इंस्टा पेमेंट क्या है?",
+      "ऑनलाइन पेमेंट करने का सबसे तेज़ तरीका बताइए।"
+    ],
+    "answer_voice": {
+      "en": "Yes, you can pay your bill without registering. We have an 'Insta Payment' option available on our website, w w w dot igl online dot net. This option allows you to pay directly using your B P Number.",
+      "hi": "जी, आप बिना रजिस्ट्रेशन के भी अपना बिल भर सकते हैं। इसके लिए हमारी वेबसाइट, डब्लू डब्लू डब्लू डॉट आई जी एल ऑनलाइन डॉट नेट, पर 'इंस्टा पेमेंट' का ऑप्शन है। यह ऑप्शन आपको सीधे अपने बी पी नंबर का इस्तेमाल करके पेमेंट करने की अनुमति देता है।"
+    }
+  },
+  {
+    "id": "PAYMENT-402",
+    "intent": "Online Payment (Registered Users)",
+    "question_variants": [
+      "How do I pay after logging in?",
+      "I am a registered user, what is the payment process?",
+      "Where do I find the make payment option?",
+      "लॉग-इन करने के बाद पेमेंट कैसे करें?",
+      "मैं एक रजिस्टर्ड यूजर हूँ, पेमेंट का प्रोसेस क्या है?",
+      "मेक पेमेंट का ऑप्शन कहाँ मिलेगा?"
+    ],
+    "answer_voice": {
+      "en": "Okay, for registered users, the payment can be made after logging into your account on our website. Once you log in, there is an option to view and pay your outstanding bill.",
+      "hi": "ठीक है, रजिस्टर्ड यूजर्स के लिए, पेमेंट हमारी वेबसाइट पर आपके अकाउंट में लॉग-इन करने के बाद किया जा सकता है। लॉग-इन करने के बाद, आपके बकाया बिल को देखने और भुगतान करने का ऑप्शन होता है।"
+    }
+  },
+  {
+    "id": "PAYMENT-403",
+    "intent": "NACH (Auto-Debit from Bank)",
+    "question_variants": [
+      "How to set up automatic bill payment from my bank account?",
+      "What is the NACH facility?",
+      "How to enable auto-debit for my IGL bill?",
+      "Can my bill be paid automatically from my bank?",
+      "मेरे बैंक अकाउंट से ऑटोमेटिक बिल पेमेंट कैसे सेट करें?",
+      "एन ए सी एच सुविधा क्या है?",
+      "आईजीएल बिल के लिए ऑटो-डेबिट कैसे चालू करें?",
+      "क्या मेरा बिल बैंक से अपने-आप कट सकता है?"
+    ],
+    "answer_voice": {
+      "en": "I can certainly explain the N A C H auto-debit facility. To set it up, you need to download the N A C H form from our website, fill it, and submit it to our R K Puram office along with a cancelled cheque. It takes about three weeks to activate. I can provide the detailed address when you are ready.",
+      "hi": "जी बिलकुल, मैं आपको एन ए सी एच ऑटो-डेबिट सुविधा के बारे में समझाता हूँ। इसे सेट करने के लिए, आपको हमारी वेबसाइट से एन ए सी एच फॉर्म डाउनलोड करके, उसे भरकर, एक कैंसल्ड चेक के साथ हमारे आर के पुरम ऑफिस में जमा करना होगा। इसे चालू होने में लगभग तीन हफ्ते लगते हैं। जब आप तैयार हों तो मैं आपको पूरा पता बता सकता हूँ।"
+    }
+  },
+  {
+    "id": "PAYMENT-404",
+    "intent": "EBPP (Bank's Bill Pay Service)",
+    "question_variants": [
+      "How can I pay through my bank's website?",
+      "What is E B P P?",
+      "How to register IGL as a biller in my bank account?",
+      "मैं अपने बैंक की वेबसाइट से पेमेंट कैसे करूँ?",
+      "ई बी पी पी क्या है?",
+      "अपने बैंक अकाउंट में आईजीएल को बिलर के तौर पर कैसे जोड़ें?"
+    ],
+    "answer_voice": {
+      "en": "Yes, you can pay through your bank's net banking portal using the E B P P service. To do this, you would need to add 'Indraprastha Gas Limited' as a biller within your bank's 'Bill Pay' section. After it's added, you will be able to see and pay your I G L bills there.",
+      "hi": "जी हाँ, आप ई बी पी पी सर्विस का इस्तेमाल करके अपने बैंक के नेट बैंकिंग पोर्टल से पेमेंट कर सकते हैं। इसके लिए, आपको अपने बैंक के 'बिल पे' सेक्शन के अंदर 'इंद्रप्रस्थ गैस लिमिटेड' को एक बिलर के रूप में जोड़ना होगा। इसे जोड़ने के बाद, आप अपने आई जी एल के बिल वहां देख और भर पाएंगे।"
+    }
+  },
+  {
+    "id": "PAYMENT-405",
+    "intent": "SI on Card (Auto-Debit from Card)",
+    "question_variants": [
+      "How to set up automatic payment from my credit card?",
+      "What is Standing Instruction on Card?",
+      "Can my credit card be charged automatically for my bill?",
+      "मेरे क्रेडिट कार्ड से ऑटोमेटिक पेमेंट कैसे सेट करें?",
+      "कार्ड पर स्टैंडिंग इंस्ट्रक्शन क्या है?",
+      "क्या मेरा क्रेडिट कार्ड मेरे बिल के लिए अपने आप चार्ज हो सकता है?"
+    ],
+    "answer_voice": {
+      "en": "I can explain how to set up automatic payments from your credit card. This is done through a service called 'Standing Instruction' or S I. You would need to download the S I form from our website and courier the filled form to our office in R K Puram. After that, your card will be automatically charged.",
+      "hi": "मैं आपको समझाता हूँ कि क्रेडिट कार्ड से ऑटोमेटिक पेमेंट कैसे सेट करें। यह 'स्टैंडिंग इंस्ट्रक्शन' या एस आई नामक सर्विस के माध्यम से किया जाता है। आपको हमारी वेबसाइट से एस आई फॉर्म डाउनलोड करके और भरे हुए फॉर्म को हमारे आर के पुरम ऑफिस में कूरियर करना होगा। उसके बाद, आपका कार्ड अपने आप चार्ज हो जाएगा।"
+    }
+  },
+  {
+    "id": "PAYMENT-406",
+    "intent": "E-wallet & QR Code Payment",
+    "question_variants": [
+      "How can I pay using Paytm?",
+      "Can I pay by scanning a Q R code?",
+      "Do you accept e-wallet payments?",
+      "Where is the Q R code on the bill?",
+      "मैं पेटीएम से पेमेंट कैसे करूँ?",
+      "क्या मैं क्यू आर कोड स्कैन करके पेमेंट कर सकता हूँ?",
+      "क्या आप ई-वॉलेट से पेमेंट लेते हैं?",
+      "बिल पर क्यू आर कोड कहाँ होता है?"
+    ],
+    "answer_voice": {
+      "en": "Yes, you can pay using the Paytm mobile app by selecting 'Indraprastha Gas Limited' in the 'Gas' bill payment section. Additionally, you can also pay by scanning the Q R code which is printed on the right side of your physical bill.",
+      "hi": "जी हाँ, आप पेटीएम मोबाइल ऐप में 'गैस' बिल पेमेंट सेक्शन में 'इंद्रप्रस्थ गैस लिमिटेड' को चुनकर पेमेंट कर सकते हैं। इसके अलावा, आप क्यू आर कोड को स्कैन करके भी पेमेंट कर सकते हैं, जो आपके फिजिकल बिल के दाईं ओर छपा होता है।"
+    }
+  },
+  {
+    "id": "CONNECTION-401",
+    "intent": "PNG vs LPG",
+    "question_variants": [
+      "What is the difference between PNG and LPG?",
+      "How is PNG better than LPG?",
+      "Why should I choose PNG?",
+      "पी एन जी और एल पी जी में क्या फर्क है?",
+      "पी एन जी, एल पी जी से बेहतर कैसे है?",
+      "मुझे पी एन जी क्यों चुनना चाहिए?"
+    ],
+    "answer_voice": {
+      "en": "That's a great question. The main difference is that L P G comes in cylinders, while P N G, which is Piped Natural Gas, gives you a continuous supply through a pipeline directly to your kitchen, twenty-four seven. P N G is also safer because it's lighter than air and disperses quickly in case of a leak. You pay only for what you use, and it saves you the hassle of booking cylinders.",
+      "hi": "यह बहुत अच्छा सवाल है। मुख्य अंतर यह है कि एल पी जी सिलेंडर में आती है, जबकि पी एन जी, यानी पाइप्ड नेचुरल गैस, आपको चौबीसों घंटे सीधे आपकी रसोई में पाइपलाइन के माध्यम से लगातार सप्लाई देती है। पी एन जी ज़्यादा सुरक्षित भी है क्योंकि यह हवा से हल्की होती है और लीक होने पर जल्दी फैल जाती है। आप केवल उतना ही भुगतान करते हैं जितना आप इस्तेमाल करते हैं, और यह आपको सिलेंडर बुक करने की झंझट से बचाता है।"
+    }
+  },
+  {
+    "id": "OWNERSHIP-001",
+    "intent": "Ownership Transfer Terms and Conditions",
+    "question_variants": [
+      "What are the terms for ownership transfer?",
+      "How much does it cost to transfer ownership?",
+      "How long does the ownership transfer take?",
+      "Are there any charges for ownership transfer?",
+      "ओनरशिप ट्रांसफर के नियम और शर्तें क्या हैं?",
+      "नाम बदलवाने का कितना खर्चा आता है?",
+      "ओनरशिप ट्रांसफर में कितना समय लगता है?",
+      "ओनरशिप ट्रांसफर का कोई चार्ज है क्या?"
+    ],
+    "answer_voice": {
+      "en": "You're asking about the terms and costs? I can clarify that for you. The main thing to check is that there are no pending bills. For the required N A C H form, you can download it from our website. The process takes about fourteen days after all documents are submitted. For a successful transfer, a charge of five hundred and ninety rupees, including G S T, will be added to your next bill.",
+      "hi": "आप ट्रांसफर के नियम और खर्चे के बारे में पूछ रहे हैं? मैं आपको वो साफ-साफ बता देता हूँ। सबसे ज़रूरी चीज़ ये है कि अकाउंट पर कोई पुराना बिल बाकी न हो। ज़रूरी एन ए सी एच फॉर्म आप हमारी वेबसाइट से डाउनलोड कर सकते हैं। सारे डॉक्यूमेंट्स जमा होने के बाद, प्रोसेस में लगभग चौदह दिन लगते हैं। सफल ट्रांसफर के लिए, पाँच सौ नब्बे रुपये, जी एस टी मिलाकर, का चार्ज आपके अगले बिल में जोड़ दिया जाएगा।"
+    }
+  },
+  {
+    "id": "OWNERSHIP-002",
+    "intent": "Minor Corrections Process",
+    "question_variants": [
+      "How to correct a spelling mistake in my name?",
+      "My address is wrong on the bill, how to fix it?",
+      "Process for minor corrections.",
+      "How to update my address details?",
+      "मेरे नाम की स्पेलिंग गलत है, उसे कैसे ठीक कराऊं?",
+      "बिल पर मेरा पता गलत है, इसे कैसे सही करें?",
+      "छोटी-मोटी गलतियों को ठीक कराने का क्या प्रोसेस है?",
+      "मेरा एड्रेस कैसे अपडेट होगा?"
+    ],
+    "answer_voice": {
+      "en": "I see you need to correct a spelling mistake in your name. I can tell you the process for that. You would need to send an email from your registered email address to, update k y c at igl dot co dot in. In the email, please clearly mention the correction you need. Should I spell that email address for you again?",
+      "hi": "मैं देख रहा हूँ कि आपको अपने नाम की स्पेलिंग ठीक करानी है। मैं आपको उसका प्रोसेस बता सकता हूँ। आपको अपनी रजिस्टर्ड ईमेल आई डी से, अपडेट के वाय सी ऐट आई जी एल डॉट को डॉट इन, पर एक ईमेल भेजना होगा। ईमेल में, कृपया उस सुधार का साफ-साफ उल्लेख करें जिसकी आपको ज़रूरत है। क्या मैं आपके लिए यह ईमेल एड्रेस फिर से बोल दूँ?"
+    }
+  },
+  {
+    "id": "PREPAID-501",
+    "intent": "Prepaid Meter Gas Supply Stopped",
+    "question_variants": [
+      "My gas supply has stopped even after recharging my prepaid meter.",
+      "I recharged but my gas is not working.",
+      "Why did my gas stop despite having balance?",
+      "रिचार्ज करने के बाद भी मेरी गैस सप्लाई बंद हो गई है।",
+      "मैंने रिचार्ज किया लेकिन मेरी गैस नहीं चल रही है।",
+      "बैलेंस होने के बावजूद मेरी गैस क्यों बंद हो गई?"
+    ],
+    "answer_voice": {
+      "en": "I understand the situation. If your gas supply has stopped after a recharge, it could be due to a technical issue with the meter or an error in posting the recharge. In either case, I would request you to please register a complaint at the prepaid meter control room number. They will resolve it for you.",
+      "hi": "मैं आपकी स्थिति समझ सकता हूँ। अगर रिचार्ज के बाद आपकी गैस सप्लाई बंद हो गई है, तो यह मीटर में किसी तकनीकी समस्या या रिचार्ज पोस्ट होने में किसी गड़बड़ी के कारण हो सकता है। दोनों ही मामलों में, मैं आपसे प्रीपेड मीटर कंट्रोल रूम नंबर पर शिकायत दर्ज करने का अनुरोध करूँगा। वे आपके लिए इसका समाधान कर देंगे।"
+    }
+  },
+  {
+    "id": "SUPPORT-001",
+    "intent": "Customer Support Contact",
+    "question_variants": [
+      "What is the customer care number?",
+      "How can I contact IGL?",
+      "I need to talk to customer support.",
+      "IGL ka customer care number kya hai?",
+      "मुझे आईजीएल के कस्टमर केयर से बात करनी है।",
+      "आईजीएल का हेल्पलाइन नंबर क्या है?"
+    ],
+    "answer_voice": {
+      "en": "Of course. You are already speaking with I G L Customer Care. If you need to call back later, our twenty-four seven numbers are, 0 1 1, 4 1 3 8, 7 0 0 0, and, 0 1 1, 6 9 0 2, 0 5 0 0.",
+      "hi": "जी बिलकुल। आप पहले से ही आई जी एल कस्टमर केयर से बात कर रहे हैं। अगर आपको बाद में फिर से कॉल करना हो, तो हमारे चौबीसों घंटे चलने वाले नंबर हैं, 0 1 1, 4 1 3 8, 7 0 0 0, और, 0 1 1, 6 9 0 2, 0 5 0 0."
+    }
+  },
+  {
+    "id": "SUPPORT-002",
+    "intent": "Emergency Contact",
+    "question_variants": [
+      "What is the emergency number for a gas leak?",
+      "I smell gas, who do I call?",
+      "Report an emergency.",
+      "Gas leak hone par emergency number kya hai?",
+      "मुझे गैस की गंध आ रही है, किसे फोन करूं?",
+      "इमरजेंसी में किससे संपर्क करें?"
+    ],
+    "answer_voice": {
+      "en": "You smell gas? Please listen carefully, this is very important. For your safety, please hang up this call and immediately dial our Centralized Emergency number, which is, 1 5 5, 2 1 6. I repeat, 1 5 5, 2 1 6. Please do not operate any electrical switches. Call them now.",
+      "hi": "आपको गैस की गंध आ रही है? कृपया ध्यान से सुनें, यह बहुत ज़रूरी है। आपकी सुरक्षा के लिए, आप यह कॉल काट कर तुरंत हमारे सेंट्रलाइज्ड इमरजेंसी नंबर, 1 5 5, 2 1 6, पर फोन करें। मैं दोहराता हूँ, 1 5 5, 2 1 6. कृपया कोई भी बिजली का स्विच ऑन या ऑफ न करें। अभी फोन करें।"
+    }
+  },
+  {
+    "id": "CNG-001",
+    "intent": "What is CNG",
+    "question_variants": [
+      "What is CNG?",
+      "Tell me about CNG.",
+      "Explain what CNG is.",
+      "What is compressed natural gas?",
+      "CNG kya hai?",
+      "CNG ke baare mein batao.",
+      "सीएनजी क्या होती है?",
+      "सीएनजी का मतलब क्या है?",
+      "सीएनजी गैस क्या है?",
+      "कंप्रेस्ड नेचुरल गैस क्या होती है?"
+    ],
+    "answer_voice": {
+      "en": "You're asking what C N G is? Of course, I can explain that. C N G stands for Compressed Natural Gas. To use it in vehicles, it is compressed at a high pressure of two hundred to two hundred and fifty kilograms per square centimeter, and stored in a special cylinder.",
+      "hi": "आप पूछ रहे हैं कि सी एन जी क्या है? जी, मैं बताता हूँ। सी एन जी का पूरा नाम कंप्रेस्ड नेचुरल गैस है। गाड़ियों में इस्तेमाल करने के लिए, इसे दो सौ से ढाई सौ किलोग्राम प्रति स्क्वायर सेंटीमीटर के भारी दबाव पर कंप्रेस करके एक स्पेशल सिलेंडर में भरा जाता है।"
+    }
+  },
+  {
+    "id": "CNG-002",
+    "intent": "Is CNG safe",
+    "question_variants": [
+      "Is CNG safe?",
+      "How safe is CNG?",
+      "Is it safe to use CNG?",
+      "Are there any safety concerns with CNG?",
+      "CNG safe hai kya?",
+      "Kya CNG surakshit hai?",
+      "क्या सीएनजी सुरक्षित है?",
+      "सीएनजी इस्तेमाल करना सेफ है?",
+      "सीएनजी से कोई खतरा तो नहीं है?"
+    ],
+    "answer_voice": {
+      "en": "I understand you have a question about safety. I can assure you, C N G is very safe. The main reason is that it's lighter than air, so if there's a leak, it rises up and mixes with the air instead of collecting on the ground. It is a very safe fuel.",
+      "hi": "मैं समझ गया, आप सीएनजी की सेफ्टी के बारे में पूछ रहे हैं। मैं आपको विश्वास दिलाता हूँ कि सीएनजी बहुत सेफ है। इसका मुख्य कारण है कि यह हवा से हल्की होती है, इसलिए अगर कभी लीक होती भी है, तो यह नीचे जमा होने के बजाय ऊपर उड़कर हवा में मिल जाती है। यह एक बहुत ही सेफ ईंधन है।"
+    }
+  },
+  {
+    "id": "CNG-003",
+    "intent": "CNG Conversion Process",
+    "question_variants": [
+      "What is involved in converting a vehicle to CNG?",
+      "How can I convert my car to CNG?",
+      "What is the process for CNG conversion?",
+      "How to get a CNG kit installed?",
+      "Gaadi ko CNG mein kaise convert karwate hain?",
+      "CNG kit lagwane ka kya process hai?",
+      "गाड़ी में सीएनजी कैसे लगवाएं?",
+      "सीएनजी किट लगवाने की प्रक्रिया क्या है?",
+      "मेरी गाड़ी सीएनजी पर कैसे चलेगी?"
+    ],
+    "answer_voice": {
+      "en": "So you'd like to know about the process for converting your vehicle to C N G. I can certainly explain that. To start, you'll need to get a specially designed C N G conversion kit installed from an authorized center.",
+      "hi": "तो आप अपनी गाड़ी को सीएनजी में कन्वर्ट कराने का प्रोसेस जानना चाहते हैं। मैं आपको बिलकुल समझाता हूँ। इसके लिए, आपको एक स्पेशल सीएनजी कन्वर्जन किट एक अधिकृत सेंटर से लगवानी होगी।"
+    }
+  },
+  {
+    "id": "CNG-004",
+    "intent": "Run on Petrol after CNG",
+    "question_variants": [
+      "Can a CNG car run on Petrol?",
+      "What if my car runs out of CNG?",
+      "Can I switch between CNG and Petrol?",
+      "Does the car work on petrol after CNG conversion?",
+      "CNG khatam hone par gaadi petrol par chal sakti hai?",
+      "Kya CNG gaadi petrol par chalti hai?",
+      "क्या सीएनजी वाली गाड़ी पेट्रोल पर चल सकती है?",
+      "सीएनजी खत्म होने पर क्या करें?",
+      "पेट्रोल और सीएनजी, दोनों पर गाड़ी कैसे चलती है?"
+    ],
+    "answer_voice": {
+      "en": "Yes, absolutely. After C N G conversion, your car can run on either fuel. There is a switch on the dashboard that lets you easily switch from C N G to petrol whenever you want.",
+      "hi": "जी हाँ, बिलकुल। C N G लगवाने के बाद भी आपकी गाड़ी दोनों ईंधन पर चल सकती है। डैशबोर्ड पर एक स्विच होता है, जिससे आप जब चाहें आसानी से C N G से पेट्रोल पर गाड़ी को चला सकते हैं।"
+    }
+  },
+  {
+    "id": "CNG-005",
+    "intent": "CNG Cylinder Details",
+    "question_variants": [
+      "What are the dimensions and weight of a CNG cylinder?",
+      "Tell me about the CNG cylinder.",
+      "How heavy is a CNG cylinder?",
+      "What is the size of a CNG cylinder?",
+      "CNG cylinder ka size aur weight kitna hota hai?",
+      "सीएनजी सिलेंडर का वज़न कितना होता है?",
+      "सीएनजी सिलेंडर के बारे में बताइए।",
+      "सीएनजी सिलेंडर कितना बड़ा होता है?"
+    ],
+    "answer_voice": {
+      "en": "You're asking about the C N G cylinder? I can give you the details. A commonly used fifty-litre cylinder weighs about forty-eight kilograms when empty. Other sizes like forty-five, fifty-five, and sixty-five litres are also available.",
+      "hi": "आप सी एन जी सिलेंडर के बारे में पूछ रहे हैं? मैं आपको डिटेल्स देता हूँ। आमतौर पर इस्तेमाल होने वाला पचास लीटर का खाली सिलेंडर लगभग अड़तालीस किलो का होता है। पैंतालीस, पचपन, और पैंसठ लीटर जैसे दूसरे साइज़ भी आते हैं।"
+    }
+  },
+  {
+    "id": "CNG-006",
+    "intent": "CNG Mileage",
+    "question_variants": [
+      "What is the mileage from one fill of CNG?",
+      "How much mileage does CNG give?",
+      "What is the average of a CNG car?",
+      "Ek baar CNG bharwane par gaadi kitna chalti hai?",
+      "CNG ki mileage kitni hai?",
+      "सीएनजी की एवरेज क्या है?",
+      "एक किलो सीएनजी में गाड़ी कितनी चलती है?",
+      "सीएनजी की माइलेज कितनी होती है?"
+    ],
+    "answer_voice": {
+      "en": "The mileage from a full cylinder can vary depending on your vehicle model, city road conditions, and your driving style.",
+      "hi": "एक भरे हुए सिलेंडर से गाड़ी कितना चलेगी, यह आपके गाड़ी के मॉडल, शहर की सड़कों और आपके चलाने के तरीके पर निर्भर करता है।"
+    }
+  },
+  {
+    "id": "CNG-007",
+    "intent": "CNG Refuelling Safety",
+    "question_variants": [
+      "Is refuelling a CNG cylinder safe?",
+      "What is the pressure in a CNG cylinder?",
+      "How safe is it to get CNG filled?",
+      "CNG bharwana safe hai?",
+      "Cylinder mein CNG ka pressure kitna hota hai?",
+      "सीएनजी भरवाते समय कोई खतरा तो नहीं है?",
+      "गैस भरवाना कितना सुरक्षित है?",
+      "सीएनजी सिलेंडर में दबाव कितना होता है?"
+    ],
+    "answer_voice": {
+      "en": "Yes, refuelling is very safe. C N G cylinders are built strong to handle high pressure, up to two hundred kilograms per square centimeter. They are properly tested and approved by government authorities and also have a safety disc that releases pressure automatically in case it gets too high.",
+      "hi": "हाँ, C N G भरवाना बहुत सुरक्षित है। C N G सिलेंडर बहुत मज़बूत बनाए जाते हैं ताकि वे दो सौ किलोग्राम प्रति स्क्वायर सेंटीमीटर तक का भारी दबाव झेल सकें। इन्हें सरकारी अधिकारीयों द्वारा ठीक से टेस्ट और अप्रूव किया जाता है और साथ ही, इनमें एक सेफ्टी डिस्क भी होती है, जो दबाव बहुत ज़्यादा बढ़ जाने पर अपने आप गैस को बाहर निकालकर किसी भी हादसे को रोकती है।"
+    }
+  },
+  {
+    "id": "CNG-008",
+    "intent": "CNG Savings",
+    "question_variants": [
+      "How much can I save with CNG?",
+      "Is CNG cheaper than petrol?",
+      "What are the savings after converting to CNG?",
+      "CNG lagwane se kitni bachat hogi?",
+      "CNG petrol se sasti hai?",
+      "सीएनजी से कितने पैसे बचते हैं?",
+      "पेट्रोल के मुकाबले सीएनजी में कितनी बचत है?",
+      "क्या सीएनजी एक सस्ता विकल्प है?"
+    ],
+    "answer_voice": {
+      "en": "You're asking about the savings with C N G? That's a great question. Based on current prices in Delhi, you can expect to reduce your fuel bill by about fifty percent. It's a significant saving.",
+      "hi": "आप सी एन जी से होने वाली बचत के बारे में पूछ रहे हैं? यह बहुत अच्छा सवाल है। दिल्ली की मौजूदा कीमतों के हिसाब से, आप अपने पेट्रोल के खर्च में लगभग पचास प्रतिशत की कमी की उम्मीद कर सकते हैं। यह एक बड़ी बचत है।"
+    }
+  },
+  {
+    "id": "CNG-009",
+    "intent": "CNG Kit Servicing",
+    "question_variants": [
+      "Does a CNG kit require servicing?",
+      "How often should I get my CNG kit serviced?",
+      "Is maintenance required for CNG kits?",
+      "CNG kit ki servicing karwani padti hai kya?",
+      "सीएनजी किट की सर्विस कब करानी चाहिए?",
+      "क्या सीएनजी किट को मेंटेनेंस की जरूरत होती है?",
+      "सीएनजी सिलेंडर की टेस्टिंग कब होती है?"
+    ],
+    "answer_voice": {
+      "en": "You'd like to know about servicing for the C N G kit. These kits are very reliable and don't need frequent servicing. However, a routine check-up is always a good idea. Also, as per government rules, the cylinder must be tested every three years.",
+      "hi": "आप सी एन जी किट की सर्विसिंग के बारे में जानना चाहते हैं। यह किट काफी भरोसेमंद होती हैं और उन्हें बार-बार सर्विसिंग की ज़रूरत नहीं पड़ती। लेकिन, एक रूटीन चेक-अप करवाना हमेशा अच्छा होता है। साथ ही, सरकारी नियमों के अनुसार, हर तीन साल में सिलेंडर का प्रेशर टेस्ट कराना ज़रूरी है।"
+    }
+  },
+  {
+    "id": "CNG-010",
+    "intent": "CNG Effect on Engine",
+    "question_variants": [
+      "Does CNG have any harmful effect on the engine?",
+      "Is CNG bad for the car's engine?",
+      "Does CNG damage the engine?",
+      "Kya CNG engine ke liye kharab hai?",
+      "क्या सीएनजी से इंजन पर बुरा असर पड़ता है?",
+      "सीएनजी से इंजन को नुकसान होता है क्या?",
+      "क्या सीएनजी इंजन की लाइफ कम करती है?"
+    ],
+    "answer_voice": {
+      "en": "No, in fact, C N G is generally good for the engine. It's a clean fuel that doesn't dilute or contaminate the engine oil. This can actually reduce wear and tear and may even extend the engine's life.",
+      "hi": "नहीं, असल में C N G इंजन के लिए अच्छी होती है। यह एक साफ ईंधन है जो इंजन ऑयल को गंदा या पतला नहीं करता। इससे इंजन की घिसावट कम होती है और उसकी लाइफ भी बढ़ सकती है।"
+    }
+  },
+  {
+    "id": "CNG-011",
+    "intent": "Diesel Vehicle to CNG",
+    "question_variants": [
+      "Can a diesel vehicle be converted to CNG?",
+      "Can I install CNG in my diesel car?",
+      "Is CNG conversion possible for diesel engines?",
+      "Kya diesel gaadi mein CNG lag sakti hai?",
+      "क्या डीज़ल गाड़ी सीएनजी में बदल सकती है?",
+      "डीज़ल कार में सीएनजी लगवाने का क्या तरीका है?"
+    ],
+    "answer_voice": {
+      "en": "Yes, a diesel vehicle can be converted to run on C N G. However, the cost of conversion is higher compared to a petrol vehicle, and with current technology, it cannot run on both diesel and C N G.",
+      "hi": "हाँ, डीज़ल गाड़ी को C N G पर चलाने के लिए कन्वर्ट किया जा सकता है। लेकिन, पेट्रोल गाड़ी के मुकाबले इसका खर्चा ज़्यादा आता है, और मौजूदा टेक्नोलॉजी के साथ, यह डीज़ल और C N G दोनों पर नहीं चल सकती।"
+    }
+  },
+  {
+    "id": "CNG-012",
+    "intent": "CNG Exhaust Fumes",
+    "question_variants": [
+      "Why are exhaust fumes so small in CNG-run vehicles?",
+      "Why does CNG cause less pollution?",
+      "Is CNG an eco-friendly fuel?",
+      "CNG gaadi se dhuan kam kyon nikalta hai?",
+      "सीएनजी से प्रदूषण कम क्यों होता है?",
+      "क्या सीएनजी पर्यावरण के लिए अच्छी है?",
+      "सीएनजी गाड़ी धुआं क्यों नहीं देती?"
+    ],
+    "answer_voice": {
+      "en": "C N G is a very clean, environment-friendly fuel. It burns very efficiently and produces significantly fewer pollutants and carbon particles compared to petrol or diesel. That's why the exhaust fumes are almost negligible.",
+      "hi": "C N G एक बहुत ही साफ और पर्यावरण के लिए अच्छा ईंधन है। यह बहुत अच्छी तरह से जलता है और पेट्रोल या डीज़ल के मुकाबले बहुत कम प्रदूषण और कार्बन के कण पैदा करता है। इसीलिए इससे निकलने वाला धुआं ना के बराबर होता है।"
+    }
+  }
+]

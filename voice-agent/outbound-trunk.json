@@ -1,0 +1,9 @@
+{
+  "trunk": {
+    "name": "Human Agent",
+    "address": "12246133969913545.zt.plivo.com",
+    "numbers": ["+912269976382"],
+    "auth_username": "voiceagent",
+    "auth_password": "L!ber!n@12345"
+  }
+}

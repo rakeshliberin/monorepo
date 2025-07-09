@@ -1,0 +1,67 @@
+# CNG Prices in India
+
+## NCT of Delhi
+- Price: ₹75.09 per Kg
+
+## Noida
+- Price: ₹83.70 per Kg
+
+## Greater Noida (including UPSRTC)
+- Price: ₹83.70 per Kg
+
+## Ghaziabad
+- Price: ₹83.70 per Kg
+
+## Muzaffarnagar
+- Price: ₹85.08 per Kg
+
+## Meerut
+- Price: ₹85.08 per Kg
+
+## Shamli
+- Price: ₹85.08 per Kg
+
+## Gurugram
+- Price: ₹82.12 per Kg
+
+## Rewari
+- Price: ₹82.70 per Kg
+
+## Karnal
+- Price: ₹83.43 per Kg
+
+## Kaithal
+- Price: ₹83.43 per Kg
+
+## Kanpur
+- Price: ₹87.92 per Kg
+
+## Hamirpur
+- Price: ₹87.92 per Kg
+
+## Fatehpur
+- Price: ₹87.92 per Kg
+
+## Ajmer
+- Price: ₹86.44 per Kg
+
+## Pali
+- Price: ₹86.44 per Kg
+
+## Rajsamand
+- Price: ₹86.44 per Kg
+
+## Mahoba
+- Price: ₹83.92 per Kg
+
+## Banda
+- Price: ₹83.92 per Kg
+
+## Chitrakoot
+- Price: ₹83.92 per Kg
+
+## Hapur
+- Price: ₹85.70 per Kg
+
+## Gautambudh nagar (Noida)
+- Price: ₹83.70 per Kg

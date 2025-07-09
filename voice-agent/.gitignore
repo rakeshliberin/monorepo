@@ -1,0 +1,31 @@
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo 
+
+.venv
+.history
+service-account-key.json
+
+.python-version
+
+KMS/
+
+ref-docs/
+
+logs/

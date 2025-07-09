@@ -1,0 +1,6 @@
+- model_name: gemini-2.5-flash
+  litellm_config:
+    model: vertex_ai/gemini-2.5-flash-preview-04-17
+    vertex_credentials: "./service-account-key.json"
+    vertex_project: "ultra-strength-458503-m2"
+    vertex_location: "us-central1"
