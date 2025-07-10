@@ -38,13 +38,11 @@ services:
       - ./litellm/config.yaml:/app/config.yaml
     command:
       - "--config=/app/config.yaml"
-    ports:
-      - "4000:4000"
     environment:
-      DATABASE_URL: "postgresql://llmproxy:dbpassword9090@db:5432/litellm"
+      DATABASE_URL: "postgresql://llmproxy:dbpassword9090@localhost:5432/litellm"
       STORE_MODEL_IN_DB: "True"
     env_file:
-      - ./litellm/.env
+      - ./litellm/.env.example
     depends_on:
       - db
     healthcheck:
@@ -53,6 +51,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+    network_mode: "host"
 
   db:
     image: postgres:16
@@ -62,8 +61,6 @@ services:
       POSTGRES_DB: litellm
       POSTGRES_USER: llmproxy
       POSTGRES_PASSWORD: dbpassword9090
-    ports:
-      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -71,27 +68,25 @@ services:
       interval: 1s
       timeout: 5s
       retries: 10
+    network_mode: "host"
 
   prometheus:
     image: prom/prometheus
     volumes:
       - prometheus_data:/prometheus
       - ./litellm/prometheus.yml:/etc/prometheus/prometheus.yml
-    ports:
-      - "9090:9090"
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
       - "--storage.tsdb.retention.time=15d"
     restart: always
+    network_mode: "host"
 
   voice-agent:
     build:
       context: ./voice-agent
     env_file:
       - ./voice-agent/.env
-    ports:
-      - "8081:8081"
     restart: unless-stopped
     network_mode: "host"
 
