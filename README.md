@@ -11,7 +11,7 @@ Ensure the following are installed on your system:
 - Docker & Docker Compose
 - Node.js and `pnpm` (for Langfuse development)
 - macOS or Linux system (recommended)
-- Ports like `3000`, `4000`, `5432`, `6379`, `7880`, and `5060` should be free
+- Ports like `3000`, `4000`, `5432`, `6379`, `7880`, and `5060`, UDP 50000-60000 should be free and allowed in ingress
 
 ---
 
@@ -76,9 +76,54 @@ lk use-project voice-agent
 
 # Step 3: Create trunks
 lk trunks create --from-file inbound-trunk.json
+inbound trunk looks like 
+{
+  "trunk": {
+    "name": "Livekit",
+    "numbers": ["+912269976423"]
+  }
+}
+
+
 lk trunks create --from-file outbound-trunk.json
+{
+  "trunk": {
+    "name": "Human Agent",
+    "address": "12246133969913545.zt.plivo.com",
+    "numbers": ["+912269976423"],
+    "auth_username": "voiceagent",
+    "auth_password": "L!ber!n@12345"
+  }
+}
 
 # Step 4: Create dispatch rule
 lk trunks dispatch-rules create --from-file dispatch-rule.json
+dispatch-rule.json
+{
+  "rule": {
+    "dispatchRuleIndividual": {
+      "roomPrefix": "call-"
+    }
+  }
+}
+
+# step 5: After creating your trunks (inbound-trunk.json and outbound-trunk.json), LiveKit CLI (lk) will return a JSON response that includes a Trunk ID like:
+
+{
+  "trunk": {
+    "id": "trunk_abc123xyz456",
+    ...
+  }
+}
 
 
+# step 6:  Update .env file (for example in voice-agent/.env)
+
+LIVEKIT_INBOUND_TRUNK_ID=trunk_abc123xyz456
+LIVEKIT_OUTBOUND_TRUNK_ID=trunk_def789uvw012
+
+# step 7: reStart Voice Agent
+
+Make sure .env is updated with Langfuse keys, and trunk id then:
+
+docker compose up voice-agent -d

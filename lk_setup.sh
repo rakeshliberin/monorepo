@@ -37,12 +37,12 @@ lk --version
 # 3. Start Docker Compose (langfuse)
 # -------------------------
 
-if [ -d "langfuse" ]; then
-  echo "Starting Docker Compose services in langfuse..."
-  (cd langfuse && docker compose up -d)
-else
-  echo "Directory 'langfuse' does not exist. Skipping 'langfuse' docker compose."
-fi
+#if [ -d "langfuse" ]; then
+#  echo "Starting Docker Compose services in langfuse..."
+#  (cd langfuse && docker compose up -d)
+#else
+#  echo "Directory 'langfuse' does not exist. Skipping 'langfuse' docker compose."
+#fi
 
 echo "All setup complete!"
 
